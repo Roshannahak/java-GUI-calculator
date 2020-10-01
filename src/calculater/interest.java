@@ -113,14 +113,13 @@ public class interest extends JFrame {
 		btncalculater.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				double num1,num2,num3,ans,into;
+				double principal, rate_of_interest, time, simple_interest;
 				try {
-					num1=Double.parseDouble(textField_1.getText());
-					num2=Double.parseDouble(textField_2.getText());
-					num3=Double.parseDouble(textField_3.getText());
-					into=num1*num2*num3;
-					ans=into/100;
-					textField_ans.setText(Double.toString(ans));
+					principal=Double.parseDouble(textField_1.getText());
+					rate_of_interest=Double.parseDouble(textField_2.getText());
+					time=Double.parseDouble(textField_3.getText());
+					simple_interest = (principal*rate_of_interest*time)/100
+					textField_ans.setText("The simple interest is "+simple_interest);
 				}catch(Exception e1) {
 					JOptionPane.showMessageDialog(null,"this is invalid value");
 				}
